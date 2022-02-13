@@ -96,6 +96,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 							?>
 						</td>
 
+						
 						<td class="product-quantity" data-title="<?php esc_attr_e( 'Quantity', 'woocommerce' ); ?>">
 						<?php
 						if ( $_product->is_sold_individually() ) {
@@ -116,6 +117,11 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 						echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item ); // PHPCS: XSS ok.
 						?>
+
+						<div class="like-block">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/Favorites.png" alt="#">
+						</div>
+						
 						</td>
 
 						<td class="product-subtotal" data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>">
@@ -123,7 +129,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 							<?php
 								echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
 							?>
+
 						</td>
+
+						
 					</tr>
 					<?php
 				}
@@ -136,11 +145,15 @@ do_action( 'woocommerce_before_cart' ); ?>
 			<?php do_action( 'woocommerce_after_cart_contents' ); ?>
 
 			</tbody>
+		
 		</table>
 		<?php do_action( 'woocommerce_after_cart_table' ); ?>
+
 	</form>
 
 	<?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
+
+
 
 	</div>
 

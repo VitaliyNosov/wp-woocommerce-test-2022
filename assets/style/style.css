@@ -93,4 +93,27 @@
 .woocommerce-cart-form__contents {
   border: 2px solid green;
 }
+
+.like-block {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 0px 10px 2px rgba(34, 60, 80, 0.2);
+  top: 175px;
+}
+
+.like-block:hover {
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */
