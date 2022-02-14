@@ -25,10 +25,56 @@
 .cart-price-block h2 {
   color: #030716;
   font-family: Cera Pro;
+  font-size: 24px;
+}
+
+::-webkit-input-placeholder {
+  font-family: Cera Pro;
+}
+
+:-ms-input-placeholder {
+  font-family: Cera Pro;
+}
+
+::-ms-input-placeholder {
+  font-family: Cera Pro;
+}
+
+::placeholder {
+  font-family: Cera Pro;
+}
+
+.coupon {
+  width: 310px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.coupon input {
+  width: 70%;
+  height: 40px;
+  border: none;
+  border: 1px solid #DADADA;
+  border-radius: 10px;
+  padding: 0px 10px 0px 10px;
 }
 
 .coupon label {
   display: none;
+}
+
+.coupon button {
+  width: 30%;
+  border: none;
+  background-color: #030716;
+  color: #FFFFFF;
+  font-family: Cera Pro;
+  font-size: 15px;
+  border-radius: 10px;
 }
 
 .cart_totals {
@@ -84,6 +130,12 @@
   top: 40%;
   margin-left: 40%;
   position: absolute;
+  font-family: Cera Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  color: #030716;
 }
 
 .product-quantity {
@@ -103,12 +155,13 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .quantity label {
   width: 50%;
   height: 20px;
-  border: 1px solid red;
   display: block;
   color: red;
   z-index: 100;
@@ -116,13 +169,21 @@
 
 .quantity input {
   width: 20%;
-  border: 1px solid red;
+  border: none;
 }
 
 .product-remove {
   width: 3%;
-  margin-left: 97%;
+  margin-left: 99%;
+  margin-top: 1%;
+  position: absolute;
+}
+
+.product-remove a {
+  color: #030716;
+  font-size: 40px;
   z-index: 100;
+  text-decoration: none;
 }
 
 .woocommerce-cart-form__contents {
@@ -145,7 +206,7 @@
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 10px 2px rgba(34, 60, 80, 0.2);
           box-shadow: 0px 0px 10px 2px rgba(34, 60, 80, 0.2);
-  top: 175px;
+  top: 160px;
 }
 
 .like-block:hover {
@@ -153,14 +214,33 @@
 }
 
 .cart-subtotal {
-  width: 250px;
-  border: 1px solid red;
+  width: 310px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cart-subtotal th {
+  font-size: 15px;
+  font-family: Cera Pro;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 19px;
+  color: #7A7B8D;
+}
+
+.cart-subtotal td {
+  font-family: Cera Pro;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
 }
 
 .cart-subtotal small {
@@ -168,25 +248,62 @@
 }
 
 .cart-discount {
-  width: 250px;
-  border: 1px solid red;
+  width: 310px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cart-discount th {
+  font-size: 15px;
+  font-family: Cera Pro;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 19px;
+  color: #7A7B8D;
+}
+
+.cart-discount td {
+  font-family: Cera Pro;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+.cart-discount a {
+  font-size: 12px;
+  color: #030716;
+  margin-left: 5px;
 }
 
 .woocommerce-shipping-totals {
-  width: 250px;
-  border: 1px solid red;
+  width: 310px;
+  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .woocommerce-shipping-totals form {
@@ -195,6 +312,23 @@
 
 .woocommerce-shipping-totals p {
   display: none;
+}
+
+.woocommerce-shipping-totals th {
+  font-size: 15px;
+  font-family: Cera Pro;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 19px;
+  color: #7A7B8D;
+}
+
+.woocommerce-shipping-totals td {
+  font-family: Cera Pro;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
 }
 
 .woocommerce-shipping-methods {
@@ -207,24 +341,112 @@
 }
 
 .tax-total {
-  width: 250px;
-  border: 1px solid red;
+  width: 310px;
+  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tax-total th {
+  font-size: 15px;
+  font-family: Cera Pro;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 19px;
+  color: #7A7B8D;
+}
+
+.tax-total td {
+  font-family: Cera Pro;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
 }
 
 .order-total {
-  width: 250px;
-  border: 1px solid red;
+  width: 310px;
+  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.order-total th {
+  font-size: 15px;
+  font-family: Cera Pro;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 19px;
+  color: #7A7B8D;
+}
+
+.order-total td {
+  font-family: Cera Pro;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
+}
+
+.wc-proceed-to-checkout {
+  width: 310px;
+  height: 54px;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #030716;
+  font-family: Cera Pro;
+  font-size: 20px;
+  font-height: 25px;
+  border-radius: 10px;
+}
+
+.wc-proceed-to-checkout a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.product-name {
+  margin-top: 3%;
+}
+
+.product-name a {
+  font-family: Cera Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  text-decoration: none;
+  color: #030716;
+}
+
+.product-quantity label {
+  font-family: Cera Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 19px;
+  color: #7A7B8D;
 }
 /*# sourceMappingURL=style.css.map */
