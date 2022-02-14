@@ -98,6 +98,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 						
 						<td class="product-quantity" data-title="<?php esc_attr_e( 'Quantity', 'woocommerce' ); ?>">
+						<label for="">Amount:</label>
 						<?php
 						if ( $_product->is_sold_individually() ) {
 							$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
@@ -158,12 +159,14 @@ do_action( 'woocommerce_before_cart' ); ?>
 	</div>
 
 <div class="cart-price-block">
+		
+		<h2>Summary</h2>
 
 		<?php if ( wc_coupons_enabled() ) { ?>
 			<div class="coupon">
 				<label for="coupon_code"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> 
-				<input form="woocommerce-cart" type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> 
-				<button form="woocommerce-cart" type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
+				<input form="woocommerce-cart" type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Your promocode', 'woocommerce' ); ?>" /> 
+				<button form="woocommerce-cart" type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply', 'woocommerce' ); ?></button>
 				<?php do_action( 'woocommerce_cart_coupon' ); ?>
 				</div>
 				<?php do_action( 'woocommerce_cart_actions' ); ?>

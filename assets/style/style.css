@@ -22,12 +22,21 @@
   position: relative;
 }
 
+.cart-price-block h2 {
+  color: #030716;
+  font-family: Cera Pro;
+}
+
 .coupon label {
   display: none;
 }
 
 .cart_totals {
   margin-top: 10%;
+}
+
+.cart_totals h2 {
+  display: none;
 }
 
 .product-subtotal {
@@ -79,9 +88,35 @@
 
 .product-quantity {
   width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-left: 40%;
   position: absolute;
   top: 30%;
+}
+
+.quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.quantity label {
+  width: 50%;
+  height: 20px;
+  border: 1px solid red;
+  display: block;
+  color: red;
+  z-index: 100;
+}
+
+.quantity input {
+  width: 20%;
+  border: 1px solid red;
 }
 
 .product-remove {
@@ -115,5 +150,81 @@
 
 .like-block:hover {
   cursor: pointer;
+}
+
+.cart-subtotal {
+  width: 250px;
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart-subtotal small {
+  display: none;
+}
+
+.cart-discount {
+  width: 250px;
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.woocommerce-shipping-totals {
+  width: 250px;
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.woocommerce-shipping-totals form {
+  display: none;
+}
+
+.woocommerce-shipping-totals p {
+  display: none;
+}
+
+.woocommerce-shipping-methods {
+  margin: 0px;
+  padding: 0px;
+}
+
+.woocommerce-shipping-methods li {
+  list-style-type: none;
+}
+
+.tax-total {
+  width: 250px;
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.order-total {
+  width: 250px;
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=style.css.map */

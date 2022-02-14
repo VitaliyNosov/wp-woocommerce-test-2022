@@ -1,3 +1,5 @@
+@import "color"
+
 .cart 
     width: 80%
     margin: 0 auto
@@ -14,6 +16,9 @@
     width: 40%
     border: 3px solid green
     position: relative
+    h2 
+        color: $black
+        font-family: Cera Pro
 
 .coupon
     label
@@ -21,6 +26,8 @@
 
 .cart_totals 
     margin-top: 10%
+    h2 
+        display: none
 
 .product-subtotal
     display: none
@@ -54,9 +61,24 @@
 
 .product-quantity
     width: 60%
+    display: flex
     margin-left: 40%
     position: absolute 
     top: 30%
+
+.quantity 
+    display: flex
+    justify-content: space-between
+    label
+        width: 50%
+        height: 20px
+        border: 1px solid red
+        display: block
+        color: red
+        z-index: 100
+    input 
+        width: 20%
+        border: 1px solid red
 
 .product-remove
     width: 3%
@@ -78,4 +100,50 @@
     top: 175px
     &:hover
         cursor: pointer
+
+.cart-subtotal 
+    width: 250px
+    border: 1px solid red
+    display: flex
+    justify-content: space-between
+    small
+        display: none
+
+.cart-discount
+    width: 250px
+    border: 1px solid red
+    display: flex
+    justify-content: space-between
+
+.woocommerce-shipping-totals
+    width: 250px
+    border: 1px solid red
+    display: flex
+    justify-content: space-between
+    form 
+        display: none
+    p 
+        display: none
+
+.woocommerce-shipping-methods 
+    margin: 0px
+    padding: 0px
+    li 
+        list-style-type: none
+
+
+.tax-total
+    width: 250px
+    border: 1px solid red
+    display: flex
+    justify-content: space-between
+
+.order-total
+    width: 250px
+    border: 1px solid red
+    display: flex
+    justify-content: space-between
+
+
+
     
