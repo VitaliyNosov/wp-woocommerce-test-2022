@@ -625,9 +625,9 @@
   border-radius: 0 0 6px 6px;
 }
 
-.dropdown.filled > span {
+/* .dropdown.filled > span {
   color: var(--textFilled);
-}
+} */
 
 .dropdown.open > span {
   border-color: var(--borderActive);
