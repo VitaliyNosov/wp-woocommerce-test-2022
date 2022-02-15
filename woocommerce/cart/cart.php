@@ -87,7 +87,26 @@ do_action( 'woocommerce_before_cart' ); ?>
 							echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'woocommerce' ) . '</p>', $product_id ) );
 						}
 						?>
-						Статический блок выбора категорий товара
+						<div class="select-block">
+
+							<div class="category-size">
+								<span>Size:</span>
+								<select class="dropdown" placeholder="Please choose">
+    								<option>S</option>
+    								<option>M</option>
+    								<option>L</option>
+    								<option>XL</option>
+									<option>XL</option>
+								</select>
+
+							</div>
+							<div class="category-color">
+							<span>Color:</span>
+								<div class="block-checkbox">
+									123
+								</div>
+							</div>
+						</div>
 						</td>
 
 						<td class="product-price" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">

@@ -157,6 +157,7 @@
           justify-content: space-between;
   -ms-flex-line-pack: center;
       align-content: center;
+  margin-left: 5px;
 }
 
 .quantity label {
@@ -170,6 +171,16 @@
 .quantity input {
   width: 20%;
   border: none;
+}
+
+.quantity span {
+  padding: 0px 0px !important;
+  width: 20 !important;
+}
+
+.quantity select {
+  border: 1px solid red;
+  width: 10px !important;
 }
 
 .product-remove {
@@ -445,6 +456,409 @@
   font-family: Cera Pro;
   font-style: normal;
   font-weight: normal;
+  font-size: 15px;
+  line-height: 19px;
+  color: #7A7B8D;
+}
+
+.dropdown {
+  --max-scroll: 8;
+  --text: #3F4656;
+  --border: #2F3545;
+  --borderActive: #23C4F8;
+  --arrow: #6C7486;
+  --arrowActive: #E4ECFA;
+  --listText: #99A3BA;
+  --listBackground: #F5F9FF;
+  --listActive: #E4ECFA;
+  --listTextActive: #6C7486;
+  --listBorder: none;
+  --textFilled: #99A3BA;
+  width: 60px;
+  position: relative;
+}
+
+.dropdown select {
+  display: none;
+}
+
+.dropdown > span {
+  cursor: pointer;
+  border-radius: 6px;
+  display: block;
+  position: relative;
+  color: #000;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.dropdown > span:after {
+  content: '\f107';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #000;
+  margin-left: 5px;
+  margin-top: 5px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.dropdown > span:before {
+  margin-right: 4px;
+  -webkit-transform: scale(0.96, 0.8) rotate(50deg);
+          transform: scale(0.96, 0.8) rotate(50deg);
+}
+
+.dropdown > span:after {
+  -webkit-transform: scale(0.96, 0.8) rotate(-50deg);
+          transform: scale(0.96, 0.8) rotate(-50deg);
+}
+
+.dropdown ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  max-height: calc(var(--max-scroll) * 42px);
+  top: 12px;
+  left: 0;
+  z-index: 1;
+  right: 0;
+  background: var(--listBackground);
+  border-radius: 6px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: opacity 0.2s ease, visibility 0.2s ease, -webkit-transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+  transition: opacity 0.2s ease, visibility 0.2s ease, -webkit-transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32), -webkit-transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+  -webkit-transform: scale(0.8) translate(0, 4px);
+          transform: scale(0.8) translate(0, 4px);
+  border: 1px solid var(--listBorder);
+  -webkit-box-shadow: 0px 4px 30px rgba(108, 108, 108, 0.25);
+          box-shadow: 0px 4px 30px rgba(108, 108, 108, 0.25);
+}
+
+.dropdown ul li {
+  opacity: 0;
+  -webkit-transform: translate(6px, 0);
+          transform: translate(6px, 0);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.dropdown ul li a {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 10px 5px 10px;
+  background-color: #fff;
+  font-size: 16px;
+  color: var(--listText);
+  text-decoration: none;
+  outline: none;
+  position: relative;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.dropdown ul li a:hover {
+  color: var(--listTextActive);
+}
+
+.dropdown ul li a:after {
+  content: '\f00c';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 8px;
+  color: #000;
+}
+
+.dropdown ul li.active a {
+  color: var(--listTextActive);
+  background: #fff;
+}
+
+.dropdown ul li.active a:before, .dropdown ul li.active a:after {
+  --scale: .6;
+  content: '';
+  display: block;
+  width: 10px;
+  height: 2px;
+  position: absolute;
+  right: 17px;
+  top: 50%;
+  opacity: 0;
+  background: var(--listText);
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.dropdown ul li.active a:before {
+  -webkit-transform: rotate(45deg) scale(var(--scale));
+          transform: rotate(45deg) scale(var(--scale));
+}
+
+.dropdown ul li.active a:after {
+  -webkit-transform: rotate(-45deg) scale(var(--scale));
+          transform: rotate(-45deg) scale(var(--scale));
+}
+
+.dropdown ul li.active a:hover:before, .dropdown ul li.active a:hover:after {
+  --scale: .9;
+  opacity: 1;
+}
+
+.dropdown ul li:first-child a {
+  border-radius: 6px 6px 0 0;
+}
+
+.dropdown ul li:last-child a {
+  border-radius: 0 0 6px 6px;
+}
+
+.dropdown.filled > span {
+  color: var(--textFilled);
+}
+
+.dropdown.open > span {
+  border-color: var(--borderActive);
+}
+
+.dropdown.open > span:before, .dropdown.open > span:after {
+  background: var(--arrowActive);
+}
+
+.dropdown.open > span:before {
+  -webkit-transform: scale(0.96, 0.8) rotate(-50deg);
+          transform: scale(0.96, 0.8) rotate(-50deg);
+}
+
+.dropdown.open > span:after {
+  -webkit-transform: scale(0.96, 0.8) rotate(50deg);
+          transform: scale(0.96, 0.8) rotate(50deg);
+}
+
+.dropdown.open ul {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1) translate(0, 12px);
+          transform: scale(1) translate(0, 12px);
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease, -webkit-transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+  transition: opacity 0.3s ease, visibility 0.3s ease, -webkit-transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32), -webkit-transform 0.3s cubic-bezier(0.4, 0.6, 0.5, 1.32);
+}
+
+.dropdown.open ul li {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.dropdown.open ul li:nth-child(1) {
+  -webkit-transition-delay: 80ms;
+          transition-delay: 80ms;
+}
+
+.dropdown.open ul li:nth-child(2) {
+  -webkit-transition-delay: 160ms;
+          transition-delay: 160ms;
+}
+
+.dropdown.open ul li:nth-child(3) {
+  -webkit-transition-delay: 240ms;
+          transition-delay: 240ms;
+}
+
+.dropdown.open ul li:nth-child(4) {
+  -webkit-transition-delay: 320ms;
+          transition-delay: 320ms;
+}
+
+.dropdown.open ul li:nth-child(5) {
+  -webkit-transition-delay: 400ms;
+          transition-delay: 400ms;
+}
+
+.dropdown.open ul li:nth-child(6) {
+  -webkit-transition-delay: 480ms;
+          transition-delay: 480ms;
+}
+
+.dropdown.open ul li:nth-child(7) {
+  -webkit-transition-delay: 560ms;
+          transition-delay: 560ms;
+}
+
+.dropdown.open ul li:nth-child(8) {
+  -webkit-transition-delay: 640ms;
+          transition-delay: 640ms;
+}
+
+.dropdown.open ul li:nth-child(9) {
+  -webkit-transition-delay: 720ms;
+          transition-delay: 720ms;
+}
+
+.dropdown.open ul li:nth-child(10) {
+  -webkit-transition-delay: 800ms;
+          transition-delay: 800ms;
+}
+
+select {
+  --text: #3F4656;
+  --border: #2F3545;
+  --background: #151924;
+}
+
+select.dropdown {
+  border-radius: 6px;
+  color: var(--text);
+  line-height: 22px;
+  font-size: 12px;
+  font-family: inherit;
+  -webkit-appearance: none;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+*:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.switch {
+  height: 20px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch input + span {
+  padding-left: 38px;
+  min-height: 20px;
+  line-height: 20px;
+  display: block;
+  color: #3F4656;
+  position: relative;
+  white-space: nowrap;
+}
+
+.switch input + span:not(:empty) {
+  padding-left: 46px;
+}
+
+.switch input + span:before, .switch input + span:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.switch input + span:before {
+  top: 0;
+  left: 0;
+  width: 38px;
+  height: 20px;
+  border: 1px solid #2F3545;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.switch input + span:after {
+  width: 14px;
+  height: 14px;
+  background: #2F3545;
+  top: 3px;
+  left: 3px;
+  -webkit-transition: all .45s ease;
+  transition: all .45s ease;
+}
+
+.switch input + span + svg {
+  display: none;
+}
+
+.switch input:checked + span:before {
+  background: #5628EE;
+  border-color: #5628EE;
+}
+
+.switch input:checked + span:after {
+  background: #fff;
+  -webkit-transform: translate(18px, 0);
+          transform: translate(18px, 0);
+}
+
+.switch:hover input:not(:checked) + span:before {
+  border-color: #23C4F8;
+}
+
+.select-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 10%;
+}
+
+.category-size {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Cera Pro;
+  font-size: 15px;
+  line-height: 19px;
+  color: #7A7B8D;
+}
+
+.category-size span {
+  margin-right: 5px;
+}
+
+.category-color {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Cera Pro;
   font-size: 15px;
   line-height: 19px;
   color: #7A7B8D;

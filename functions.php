@@ -143,7 +143,11 @@ function test_woocommerce_scripts() {
 	wp_enqueue_style( 'normalize-style', get_template_directory_uri() . '/assets/style/normalize.css' );
 	wp_enqueue_style( 'font-style', get_template_directory_uri() . '/assets/font/stylesheet.css' );
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/style/style.css' );
-
+	wp_deregister_script( 'jquery' );
+  	wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), _S_VERSION, true );
+  	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'test-woocommerce-pickout', get_template_directory_uri() . '/js/pickout.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'test-woocommerce-common', get_template_directory_uri() . '/js/common.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'test-woocommerce-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -151,6 +155,13 @@ function test_woocommerce_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'test_woocommerce_scripts' );
+
+// font-awesome  cdn
+
+add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
+function enqueue_load_fa() {
+wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.11.2/css/all.css' );
+}
 
 /**
  * Implement the Custom Header feature.
@@ -191,3 +202,19 @@ add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 // Вывод поля для ввода купона
 
 remove_action ( 'woocommerce_before_checkout_form' , 'woocommerce_checkout_coupon_form' ) ; 
+
+
+// Раскрывающийся список колличесва товара.
+
+function ace_quantity_input_field_args( $args, $product ) {
+	if ( ! $product->is_sold_individually() ) {
+		$args['min_value'] = 1;
+		$args['max_value'] = 10;
+		$args['step'] = 2;
+	}
+
+	return $args;
+}
+add_filter( 'woocommerce_quantity_input_args', 'ace_quantity_input_field_args', 10, 2 );
+
+
