@@ -156,6 +156,8 @@ function test_woocommerce_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'test_woocommerce_scripts' );
 
+
+
 // font-awesome  cdn
 
 add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );

@@ -23,6 +23,14 @@
 
 <div class="header-top-block">
 	<span>FREE U.S. SHIPPING 90-DAY RETURNS</span>
+	<div class="toglle-button">
+			<span>HE</span>
+				<div class="toggle">
+  					<input type="checkbox" id="toggle2" />
+  					<label for="toggle2"></label>
+				</div>
+			<span>EN</span>
+	</div>
 </div>
 
 	<div class="container">
@@ -50,6 +58,7 @@
 			</div>		
 		</div>
 	</header>
+
 		<div class="tag-block">
 			<div class="tag sale">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/1.png" alt="#">
@@ -74,10 +83,7 @@
 			</div>
 			<div class="tag womens-branding">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/6.png" alt="#">
-			</div>
-					
-			
-			
+			</div>		
 		</div>
 	</div>
 
