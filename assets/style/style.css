@@ -11,7 +11,7 @@
 }
 
 .cart-content {
-  width: 50%;
+  width: 60%;
   border: 3px solid red;
 }
 
@@ -625,10 +625,6 @@
   border-radius: 0 0 6px 6px;
 }
 
-/* .dropdown.filled > span {
-  color: var(--textFilled);
-} */
-
 .dropdown.open > span {
   border-color: var(--borderActive);
 }
@@ -814,6 +810,196 @@ html {
 
 .switch:hover input:not(:checked) + span:before {
   border-color: #23C4F8;
+}
+
+.container {
+  width: 1450px;
+  margin: 0 auto;
+}
+
+.header-top-block {
+  background-color: #F4F4F4;
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 24px;
+}
+
+.search-form {
+  width: 828px;
+  height: 40px;
+  margin-left: 10%;
+  border: none;
+  border: 1px solid #7A7B8D;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 10px 0px 10px;
+}
+
+.search-form label input {
+  width: 780px;
+  height: 100%;
+  outline: none;
+  border: none;
+}
+
+.search-submit {
+  width: 40px;
+  height: 100%;
+  background-color: #fff;
+  border: none;
+  background-image: url(http://woocommrce-test/wp-content/uploads/2022/02/Union.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.search-submit:hover {
+  cursor: pointer;
+}
+
+.button-block {
+  width: 6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tag-block {
+  margin-top: 96px;
+  height: 27px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.tag {
+  border-radius: 10px;
+  padding: 10px 15px 10px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+}
+
+.sale {
+  background-color: #FF4141;
+  border: 1px solid #FF4141;
+}
+
+.new {
+  background-color: #FFECE3;
+  border: 1px solid #FF9993;
+}
+
+.bras {
+  background-color: #FFF7FC;
+  border: 1px solid #FFC4E8;
+}
+
+.swimsuits {
+  background-color: #EAFEFF;
+  border: 1px solid #9EF3FF;
+}
+
+.sleepwear {
+  background-color: #F4EAFF;
+  border: 1px solid #593882;
+}
+
+.underwear {
+  background-color: #F8F4EA;
+  border: 1px solid #E0D5C9;
+}
+
+.sexy-lingerine {
+  background-color: #FFEAEA;
+  border: 1px solid #FFBFBF;
+}
+
+.womens-branding {
+  background-color: #EBFFE4;
+  border: 1px solid #B8FFA7;
+}
+
+.button-icon li {
+  list-style-type: none;
+}
+
+.cart-contents {
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url(http://woocommrce-test/wp-content/uploads/2022/02/Bag.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.cart-contents-count {
+  width: 15px;
+  height: 15px;
+  padding: 2%;
+  position: absolute;
+  font-size: 10px;
+  left: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
 }
 
 .select-block {
