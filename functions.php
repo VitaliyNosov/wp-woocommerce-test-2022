@@ -49,10 +49,19 @@ function test_woocommerce_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'test-woocommerce' ),
+			'header-menu' => esc_html__( 'header-menu', 'test-woocommerce' ),
 		)
 	);
-
+	register_nav_menus(
+		array(
+			'footer-menu-one' => esc_html__( 'footer-menu-one', 'test-woocommerce' ),
+		)
+	);
+	register_nav_menus(
+		array(
+			'footer-menu-two' => esc_html__( 'footer-menu-two', 'test-woocommerce' ),
+		)
+	);
 	/*
 		* Switch default core markup for search form, comment form, and comments
 		* to output valid HTML5.
@@ -119,12 +128,27 @@ add_action( 'after_setup_theme', 'test_woocommerce_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
+// function test_woocommerce_widgets_init() {
+// 	register_sidebar(
+// 		array(
+// 			'name'          => esc_html__( 'Sidebar', 'test-woocommerce' ),
+// 			'id'            => 'sidebar-1',
+// 			'description'   => esc_html__( 'Add widgets here.', 'test-woocommerce' ),
+// 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+// 			'after_widget'  => '</section>',
+// 			'before_title'  => '<h2 class="widget-title">',
+// 			'after_title'   => '</h2>',
+// 		)
+// 	);
+// }
+// add_action( 'widgets_init', 'test_woocommerce_widgets_init' );
+
 function test_woocommerce_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'test-woocommerce' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'test-woocommerce' ),
+			'name'          => esc_html__( 'Footer-Links', 'wordpress-test-2021' ),
+			'id'            => 'footer-widget',
+			'description'   => esc_html__( 'Add widgets here.', 'wordpress-test-2021' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
