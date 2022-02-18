@@ -1,3 +1,19 @@
+document.addEventListener("DOMContentLoaded", function() {
+
+
+    $('.example').bcp();
+    $('.example').on('pcb.refresh', function (e) {
+      let color = $(this).bcp('color');
+      if (color.value) {
+          $(this).css({
+              backgroundColor: color.value,
+              borderColor: color.value,
+              color: color.dark ? '#000' : '#000'
+          });
+      }
+    });
+
+
 var select = function(){
 
     $('select.dropdown').each(function() {
@@ -65,8 +81,16 @@ var select = function(){
 select();
 
 
+// Использует "updated_cart_totals" что бы скрипт
+// работал после удаления товара
+
 $( document.body ).on( 'updated_cart_totals', function(){
     select();
 });
+
+
+
+});
+
 
 

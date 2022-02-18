@@ -100,11 +100,11 @@ do_action( 'woocommerce_before_cart' ); ?>
 								</select>
 
 							</div>
-							<div class="category-color">
-							<span>Color:</span>
-								<div class="block-checkbox">
-									123
-								</div>
+								<div class="category-color">
+    								<div class="button-color-block">
+      								<span>Color:</span>
+      								<span class="example"></span>
+  								</div>
 							</div>
 						</div>
 						</td>
