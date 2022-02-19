@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+var colorBlock = function(){
 
     $('.example').bcp();
     $('.example').on('pcb.refresh', function (e) {
@@ -12,6 +13,10 @@ document.addEventListener("DOMContentLoaded", function() {
           });
       }
     });
+
+}
+
+colorBlock();
 
 
 var select = function(){
@@ -86,6 +91,8 @@ select();
 
 $( document.body ).on( 'updated_cart_totals', function(){
     select();
+    console.log('Удаленеи товара');
+    colorBlock();
 });
 
 
