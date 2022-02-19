@@ -50,8 +50,8 @@
 						</span>
 						<?php
 			                wp_nav_menu( array(
-				            'theme_location' => 'footer-menu-one',
-				            'menu_class' => 'menu__items'
+				            'theme_location' => 'footer-menu-one'
+				            // 'menu_class' => 'menu__items'
 			                ));
 		                ?>
 					</div>
@@ -61,8 +61,8 @@
 						</span>
 						<?php
 			                wp_nav_menu( array(
-				            'theme_location' => 'footer-menu-two',
-				            'menu_class' => 'menu__items'
+				            'theme_location' => 'footer-menu-two'
+				            // 'menu_class' => 'menu__items'
 			                ));
 		                ?>
 					</div>
@@ -70,7 +70,7 @@
 						<span>
 							Contact Us
 						</span>
-						<?php dynamic_sidebar('footer-widget'); ?>
+							<?php dynamic_sidebar('footer-widget'); ?>
 						<!-- <div class="widget-contact">
 							<span>
 								(866) 12-4241
