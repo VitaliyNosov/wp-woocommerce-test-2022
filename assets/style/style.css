@@ -1360,6 +1360,39 @@ footer {
   right: 230%;
 }
 
+.wishlist_table {
+  border: 2px solid green !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.wishlist_table .product-price {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid green;
+  position: absolute;
+  bottom: 10%;
+  right: 400%;
+  z-index: 100;
+}
+
+.wishlist_table .product-remove {
+  position: absolute;
+  right: 50%;
+}
+
 .select-block {
   display: -webkit-box;
   display: -ms-flexbox;

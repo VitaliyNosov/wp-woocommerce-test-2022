@@ -139,12 +139,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 
 						<div class="like-block">
-
-								
-								<?php echo do_shortcode('[yith_wcwl_add_to_wishlist]'); ?>
-							
-            				
-
+							<?php echo do_shortcode( '[кнопка]' );?>
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/Favorites.png" alt="#">
 						</div>
 						
