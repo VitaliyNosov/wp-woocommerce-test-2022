@@ -12,6 +12,7 @@
 ?>
 
 <!doctype html>
+
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -48,15 +49,20 @@
 		</div>
 		<div class="button-block">
 			<div class="button-icon">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/Favorites.png" alt="#">
-			</div>
-			<div class="button-icon">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/user.png" alt="#">
 			</div>
 			<div class="button-icon">
-				<?php echo do_shortcode( '[woocommerce_cart_icon]' );?>
+				<?php echo do_shortcode( '[woocommerce_cart_icon]' );?>		
+			</div>
+			<div class="button-icon-like">
+				<div class="vah-vah">
+					<?php echo do_shortcode( '[yith_wcwl_items_count]' ); ?>
+				</div>			
 			</div>		
 		</div>
+
+		</br>
+
 	</header>
 
 		<div class="tag-block">
@@ -86,6 +92,13 @@
 			</div>		
 		</div>
 	</div>
+
+	
+
+	
+
+
+	
 
 
 	

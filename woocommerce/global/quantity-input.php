@@ -6,7 +6,7 @@ if ( $max_value && $min_value === $max_value ) {
 } elseif ( ! empty( $max_value ) && ! empty( $step ) ) {
 	?><div class="quantity">
 		<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></label>
-		<select name="<?php echo esc_attr( $input_name ); ?>" class="qty" id="<?php echo esc_attr( $input_id ); ?>"><?php
+		<select class="dropdown" name="<?php echo esc_attr( $input_name ); ?>" class="qty" id="<?php echo esc_attr( $input_id ); ?>"><?php
 			for ( $i = $min_value; $i <= $max_value; $i = $i + $step ) :
 				?><option value="<?php echo absint( $i ); ?>" <?php selected( $input_value, absint( $i ) ); ?>><?php echo sprintf( _n( '%d','%d', $i,'woocommerce' ), $i ); ?></option><?php
 
