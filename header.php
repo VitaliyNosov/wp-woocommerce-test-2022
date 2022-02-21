@@ -48,17 +48,21 @@
 			<?php get_search_form(); ?>
 		</div>
 		<div class="button-block">
-			<div class="button-icon">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/user.png" alt="#">
+			<div class="button-icon icon-user">
+				<a href="/my-account/" target="_black">
+					<div class="user-block">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/user.png" alt="#">
+					</div>
+				</a>
 			</div>
-			<div class="button-icon">
-				<?php echo do_shortcode( '[woocommerce_cart_icon]' );?>		
-			</div>
-			<div class="button-icon-like">
+			<div class="button-icon icon-heart">
 				<div class="vah-vah">
 					<?php echo do_shortcode( '[yith_wcwl_items_count]' ); ?>
 				</div>			
-			</div>		
+			</div>	
+			<div class="button-icon icon-cart">
+				<?php echo do_shortcode( '[woocommerce_cart_icon]' );?>		
+			</div>	
 		</div>
 
 		</br>

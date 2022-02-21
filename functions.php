@@ -193,6 +193,7 @@ add_action( 'wp_enqueue_scripts', 'test_woocommerce_scripts' );
 add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
 function enqueue_load_fa() {
 wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.11.2/css/all.css' );
+
 }
 
 /**
@@ -222,6 +223,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
 // Фильт который отключает стили woocommerce
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
@@ -230,10 +232,6 @@ function mytheme_add_woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
 add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
-
-// Вывод поля для ввода купона
-
-remove_action ( 'woocommerce_before_checkout_form' , 'woocommerce_checkout_coupon_form' ) ; 
 
 
 // Раскрывающийся список колличесва товара.
@@ -248,6 +246,7 @@ function ace_quantity_input_field_args( $args, $product ) {
 	return $args;
 }
 add_filter( 'woocommerce_quantity_input_args', 'ace_quantity_input_field_args', 10, 2 );
+
 
 // Кастомная форма поиска
 
